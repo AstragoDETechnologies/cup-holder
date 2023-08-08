@@ -1,5 +1,4 @@
 <script lang="ts">
-  import TitleBar from "./lib/TitleBar.svelte";
   import { invoke } from "@tauri-apps/api/tauri";
 
   async function open_cd_drives() {
@@ -12,8 +11,7 @@
 </script>
 
 <main class="min-h-screen bg-[#c0c0c0]">
-  <TitleBar />
-  <h1 class="text-2xl text-center font-semibold mt-5">Cup Holder</h1>
+  <h1 class="text-2xl text-center font-semibold pt-5 cs">Cup Holder PRO</h1>
   <div class="flex justify-center mt-5">
     <div class=" w-96">
       <div class="flex justify-center gap-20">
@@ -27,5 +25,8 @@
   </div>
 </main>
 
-<style>
+<style scoped>
+  .cs {
+    font-family: "Comic Sans MS";
+  }
 </style>

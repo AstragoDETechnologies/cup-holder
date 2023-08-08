@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "cup-holder",
-    "version": "0.0.0"
+    "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
@@ -21,7 +21,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "de.astrago.cup-holder",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -36,8 +36,8 @@
     "windows": [
       {
         "fullscreen": false,
-        "resizable": true,
-        "title": "cup-holder",
+        "resizable": false,
+        "title": "Cup Holder PRO",
         "width": 400,
         "height": 200,
         "decorations": true
