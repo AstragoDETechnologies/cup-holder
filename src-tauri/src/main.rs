@@ -1,11 +1,7 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
+use eject::{device::Device, discovery::cd_drives};
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
@@ -15,8 +11,6 @@ fn open_cd_drives() {
         drive.eject().unwrap();
     }
 }
-
-use eject::{device::Device, discovery::cd_drives};
 
 #[tauri::command]
 async fn close_cd_drives() {
@@ -28,11 +22,7 @@ async fn close_cd_drives() {
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![
-            greet,
-            open_cd_drives,
-            close_cd_drives
-        ])
+        .invoke_handler(tauri::generate_handler![open_cd_drives, close_cd_drives])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
