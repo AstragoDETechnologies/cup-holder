@@ -1,6 +1,6 @@
-# Tauri + Svelte + Typescript
+# Cup Holder PRO
 
-This template should help get you started developing with Tauri, Svelte and TypeScript in Vite.
+This program allowes you to deploy a cup holder from your computer. At least one CD drive with automatic opening and closing is required.
 
 ## Recommended IDE Setup
 
